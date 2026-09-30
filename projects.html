@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projelerim — the_xenonstate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- Dynamic Mesh Background -->
+  <div class="mesh-bg">
+    <div class="mesh-blob blob-1"></div>
+    <div class="mesh-blob blob-2"></div>
+    <div class="mesh-blob blob-3"></div>
+    <div class="mesh-overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <div class="logo-dot"></div>
+        <span id="nav-logo-text">the_xenonstate</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="about.html" class="nav-link">Hakkımda</a>
+        <a href="projects.html" class="nav-link active">Projeler</a>
+        <a href="talha_notebook/index.html" class="nav-link " target="_blank">Not Defterim</a>
+      </div>
+      <a href="mailto:xenonstate.offical@gmail.com" class="nav-cta" id="nav-cta-btn">Bana Ulaşın</a>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects" style="padding-top: 150px;">
+    <div class="container">
+      <div class="section-badge reveal">Portföyüm</div>
+      <h2 class="heading-lg reveal delay-1">Öne Çıkan Projeler</h2>
+
+      <div class="projects-grid">
+
+        <!-- PROJE BAŞLANGICI -->
+        <div class="project-card reveal delay-1">
+          <div class="project-img-wrapper">
+            <img src="img/watchvault.png" alt="WATCHVAULT" loading="lazy">
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-content">
+            <div class="project-category">Mobil / Web Uygulama</div>
+            <h3 class="project-title">WATCHVAULT</h3>
+            <p class="project-desc">
+              <strong>Kişisel Arşiv ve Takip:</strong> Film ve dizilerini kolayca listele, izleme durumlarını yönet ve
+              kendi dijital kütüphaneni oluştur.<br><br>
+              <strong>Admin ile İletişim:</strong> Kullanıcıların sistem üzerinden doğrudan admin ile bağlantı
+              kurabildiği, öneri ve geri bildirimlerini iletebildiği etkileşimli yapı.<br><br>
+              <strong>Modern Arayüz:</strong> Sade, şık ve kullanıcı deneyimini ön planda tutan tasarımıyla akıcı bir
+              kullanım deneyimi sunar.
+            </p>
+            <div class="project-tech" style="margin-bottom: 24px;">
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+            </div>
+
+            <!-- PROJE LİNKİ -->
+            <a href="https://mtalha55.github.io/Dizi_Film_vb_kayit/" class="btn-premium"
+              style="padding: 10px 20px; font-size: 0.9rem; width: fit-content;" target="_blank">
+              Projeyi İncele <i data-lucide="external-link" style="width:16px;height:16px;margin-left:8px;"></i>
+            </a>
+
+          </div>
+        </div>
+        <!-- PROJE BİTİŞİ -->
+
+        <!-- YENİ BİR PROJE EKLEMEK İÇİN YUKARIDAKİ DİV BLOĞUNU KOPYALAYIP BURAYA YAPIŞTIRIN -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid var(--border-glass); padding: 40px 0; margin-top: 80px; text-align: center;">
+    <div class="container">
+      <p style="color: var(--text-secondary); font-size: 0.95rem;">
+        © 2026 the_xenonstate. Tüm hakları saklıdır.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

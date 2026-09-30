@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Ders Notları - Talha'nın Not Defteri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/html5-notes.css">
+</head>
+<body>
+    <div class="notes-container">
+        <a href="index.html" class="back-link">&larr; Ana Sayfaya Dön</a>
+        
+        <h1 class="main-title" style="font-size: 2.5rem;">Sıfırdan İleri Seviye HTML5</h1>
+        <p style="text-align: center; color: #94a3b8; margin-bottom: 2rem;">Web tasarımına yeni başlayanlar için en temelden başlayıp gelişmiş formlara kadar uzanan kapsamlı bir rehber.</p>
+
+        <!-- 1. Temel Belge Yapısı -->
+        <section class="notes-section">
+            <h2>1. Temel Belge Yapısı (Document Structure)</h2>
+            <p>Her HTML sayfası (web sitesi) standart bir iskelet ile başlar. Tarayıcı (Chrome vb.) sayfayı okumaya bu yapıdan başlar.</p>
+            <div class="code-example">
+<code>&lt;!DOCTYPE html&gt; &lt;!-- Tarayıcıya bunun HTML5 olduğunu söyler --&gt;
+&lt;html lang="tr"&gt; &lt;!-- Sayfanın dili Türkçe --&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt; &lt;!-- Türkçe karakterleri destekler --&gt;
+    &lt;title&gt;Sekme Başlığı&lt;/title&gt; &lt;!-- Tarayıcı sekmesinde yazan isim --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Kullanıcının ekranda gördüğü HER ŞEY buraya yazılır --&gt;
+    &lt;h1&gt;Merhaba Dünya!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+            </div>
+        </section>
+
+        <!-- 2. Başlıklar ve Metin Biçimlendirme -->
+        <section class="notes-section">
+            <h2>2. Başlıklar ve Metin Biçimlendirme</h2>
+            <p>Gazetelerdeki gibi web sayfalarının da başlıkları (Heading) ve paragrafları vardır.</p>
+            
+            <h3>Başlıklar (H1 - H6)</h3>
+            <div class="code-example">
+<code>&lt;h1&gt;En Büyük ve En Önemli Başlık (Sayfada 1 tane olmalı)&lt;/h1&gt;
+&lt;h2&gt;İkinci Derece Alt Başlık&lt;/h2&gt;
+&lt;h6&gt;En Küçük Başlık&lt;/h6&gt;</code>
+            </div>
+            <div class="preview-box">
+                <h1 style="margin-top:0;">En Büyük ve En Önemli Başlık</h1>
+                <h2>İkinci Derece Alt Başlık</h2>
+                <h6>En Küçük Başlık</h6>
+            </div>
+            
+            <h3>Paragraflar ve Vurgular</h3>
+            <div class="code-example">
+<code>&lt;p&gt;Bu normal bir metin paragrafıdır.&lt;/p&gt;
+&lt;p&gt;Metin içinde &lt;strong&gt;kalın&lt;/strong&gt; ve &lt;em&gt;eğik (italik)&lt;/em&gt; yazılar kullanabilirsiniz.&lt;/p&gt;
+&lt;p&gt;Ayrıca önemli yerlerin &lt;mark&gt;altını çizebilir&lt;/mark&gt; veya &lt;br&gt; ile bir alt satıra geçebilirsiniz.&lt;/p&gt;</code>
+            </div>
+            <div class="preview-box">
+                <p style="margin-top:0;">Bu normal bir metin paragrafıdır.</p>
+                <p>Metin içinde <strong>kalın</strong> ve <em>eğik (italik)</em> yazılar kullanabilirsiniz.</p>
+                <p>Ayrıca önemli yerlerin <mark>altını çizebilir</mark> veya <br> ile bir alt satıra geçebilirsiniz.</p>
+            </div>
+        </section>
+
+        <!-- 3. Listeler -->
+        <section class="notes-section">
+            <h2>3. Listeler (Sıralı ve Sırasız)</h2>
+            <div class="code-example">
+<code>&lt;!-- Sırasız Liste (Noktalı) --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Elma&lt;/li&gt;
+    &lt;li&gt;Armut&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Sıralı Liste (Numaralı) --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Birinci Adım&lt;/li&gt;
+    &lt;li&gt;İkinci Adım&lt;/li&gt;
+&lt;/ol&gt;</code>
+            </div>
+            <div class="preview-box" style="display:flex; gap: 50px;">
+                <div>
+                    <strong>Sırasız Liste:</strong>
+                    <ul style="margin-top:10px; margin-left: 20px; color: #333;"><li>Elma</li><li>Armut</li></ul>
+                </div>
+                <div>
+                    <strong>Sıralı Liste:</strong>
+                    <ol style="margin-top:10px; margin-left: 20px; color: #333;"><li>Birinci Adım</li><li>İkinci Adım</li></ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Bağlantılar ve Görseller -->
+        <section class="notes-section">
+            <h2>4. Bağlantılar (Linkler) ve Görseller</h2>
+            <p>Başka sayfalara gitmek veya ekrana resim koymak için kullanılır.</p>
+            <div class="code-example">
+<code>&lt;!-- Tıklanabilir Link --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Google'a Git (Yeni Sekmede Açar)&lt;/a&gt;
+
+&lt;!-- Resim Ekleme --&gt;
+&lt;img src="resim-adresi.jpg" alt="Resim yüklenemezse görünecek yazı" width="300"&gt;</code>
+            </div>
+        </section>
+
+        <!-- 5. Div, Class, ID -->
+        <section class="notes-section">
+            <h2>5. HTML'de Gruplama ve Kimliklendirme (Div, Class, ID)</h2>
+            <p>Sayfadaki elemanları gruplamak ve onlara isim verip CSS veya JavaScript ile müdahale etmek için kullanılır. CSS'e geçmeden önce bunu bilmek çok önemlidir.</p>
+            
+            <h3>Div Etiketi (&lt;div&gt;)</h3>
+            <p><code>&lt;div&gt;</code> (Division), içine başka etiketler koyabileceğimiz boş bir kutudur. Kendi başına bir anlamı veya görünümü yoktur ancak sayfayı bölümlere ayırmak için en çok kullanılan etikettir.</p>
+            
+            <h3>Class ve ID Nitelikleri (Attributes)</h3>
+            <p>Bu nitelikler HTML etiketlerine kimlik veya sınıf atar:</p>
+            <div class="info-box">
+                <ul>
+                    <li><strong>class:</strong> Birçok elemana aynı ismi vermek için kullanılır. Örneğin sayfadaki birden fazla butona "mavi-buton" class'ı verip hepsini tek seferde mavi yapabilirsiniz.</li>
+                    <li><strong>id:</strong> Sayfada sadece <strong>tek bir elemana</strong> özel isim vermek için kullanılır. Kimlik numarası gibidir, sayfada eşsiz olmalıdır.</li>
+                </ul>
+            </div>
+            
+            <div class="code-example">
+<code>&lt;!-- ID ve Class Kullanımı --&gt;
+&lt;div id="ana-icerik" class="kutu-tasarimi"&gt;
+    &lt;h3 class="baslik-stili"&gt;Bu bir başlıktır&lt;/h3&gt;
+    &lt;p class="metin-stili"&gt;Bu bir paragraftır.&lt;/p&gt;
+&lt;/div&gt;</code>
+            </div>
+        </section>
+
+        <!-- 6. Formlar (Geniş Bölüm) -->
+        <section class="notes-section">
+            <h2>6. Gelişmiş Form Yapıları (Kullanıcıdan Veri Almak)</h2>
+            <p>Formlar, kullanıcıların siteye üye olması, mesaj göndermesi veya arama yapması için web'in kalbidir. HTML5 ile birlikte formlar çok yetenekli hale gelmiştir.</p>
+            
+            <h3>Yeni Input (Girdi) Türleri</h3>
+            <div class="code-example">
+<code>&lt;!-- Metin ve Şifre --&gt;
+&lt;input type="text" placeholder="Kullanıcı Adı"&gt;
+&lt;input type="password" placeholder="Şifre"&gt;
+
+&lt;!-- İletişim --&gt;
+&lt;input type="email" placeholder="ornek@mail.com" required&gt;
+&lt;input type="tel" placeholder="+90 555 555 5555"&gt;
+
+&lt;!-- Tarih, Sayı ve Renk --&gt;
+&lt;input type="number" min="1" max="100"&gt;
+&lt;input type="date"&gt;
+&lt;input type="color" value="#ff0000"&gt;</code>
+            </div>
+
+            <h3>Seçim Kutuları (Radio, Checkbox, Select)</h3>
+            <div class="code-example">
+<code>&lt;!-- Radio (Sadece tek seçim) --&gt;
+&lt;input type="radio" name="cinsiyet" value="erkek"&gt; Erkek
+&lt;input type="radio" name="cinsiyet" value="kadin"&gt; Kadın
+
+&lt;!-- Checkbox (Çoklu seçim) --&gt;
+&lt;input type="checkbox" name="onay"&gt; Kuralları kabul ediyorum
+
+&lt;!-- Açılır Menü --&gt;
+&lt;select name="sehir"&gt;
+    &lt;option value="34"&gt;İstanbul&lt;/option&gt;
+    &lt;option value="06"&gt;Ankara&lt;/option&gt;
+&lt;/select&gt;</code>
+            </div>
+
+            <h3>Metin Alanı ve Butonlar</h3>
+            <div class="code-example">
+<code>&lt;!-- Uzun Mesajlar --&gt;
+&lt;textarea name="mesaj" rows="4" placeholder="Mesajınız..."&gt;&lt;/textarea&gt;
+
+&lt;!-- Form Butonları --&gt;
+&lt;button type="submit"&gt;Formu Gönder&lt;/button&gt;
+&lt;button type="reset"&gt;Temizle&lt;/button&gt;</code>
+            </div>
+
+            <div style="margin-top: 4rem; margin-bottom: 1.5rem;">
+                <h3 style="font-size: 1.8rem;">Tüm Öğrendiklerimizin Birleşimi (Kapsamlı Form)</h3>
+                <p>Yukarıda parça parça gördüğümüz metin kutuları, seçim alanları ve butonların hepsinin bir araya gelip <strong>gerçek bir form</strong> oluşturduğu hali aşağıdadır. Kutuları doldurmayı ve butonlara tıklamayı deneyebilirsiniz:</p>
+            </div>
+
+            <div class="form-preview">
+                <h3 style="margin-top: 0; color: #333;">Kapsamlı Form Önizlemesi</h3>
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Hesap Oluştur</legend>
+                        
+                        <label for="username">Kullanıcı Adı:</label>
+                        <input type="text" id="username" placeholder="Örn: talha123" required>
+                        
+                        <label for="email">E-posta:</label>
+                        <input type="email" id="email" placeholder="mail@ornek.com">
+                        
+                        <label for="age">Yaş:</label>
+                        <input type="number" id="age" min="18" max="99">
+                        
+                        <label>Cinsiyet:</label>
+                        <input type="radio" id="p_erkek" name="p_cinsiyet"> <label class="inline-label" for="p_erkek">Erkek</label>
+                        <input type="radio" id="p_kadin" name="p_cinsiyet"> <label class="inline-label" for="p_kadin">Kadın</label>
+                        
+                        <label for="bday">Doğum Tarihi:</label>
+                        <input type="date" id="bday">
+                        
+                        <label for="city">Şehir:</label>
+                        <select id="city">
+                            <option value="">Seçiniz...</option>
+                            <optgroup label="Büyükşehirler">
+                                <option value="ist">İstanbul</option>
+                                <option value="ank">Ankara</option>
+                                <option value="iz">İzmir</option>
+                            </optgroup>
+                        </select>
+                        
+                        <label for="bio">Hakkında:</label>
+                        <textarea id="bio" rows="3" placeholder="Kendinizden bahsedin..."></textarea>
+                        
+                        <div style="margin-top: 15px;">
+                            <input type="checkbox" id="terms" required> 
+                            <label class="inline-label" for="terms">Şartları kabul ediyorum.</label>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <button type="submit" style="padding: 10px 20px; background: var(--primary-color); border:none; border-radius:5px; color:white; cursor:pointer;">Kaydol</button>
+                            <button type="reset" style="padding: 10px 20px; margin-left:10px; cursor:pointer;">Temizle</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- 7. Diğer Gelişmiş Özellikler -->
+        <section class="notes-section">
+            <h2>7. İleri Seviye Özellikler ve Etiketler</h2>
+            
+            <h3>Duyarlı Görseller (Picture)</h3>
+            <p>Kullanıcının ekranı telefonsa küçük, bilgisayarsa büyük resim yüklemek için kullanılır.</p>
+            <div class="code-example">
+<code>&lt;picture&gt;
+    &lt;source media="(min-width: 800px)" srcset="buyuk-resim.jpg"&gt;
+    &lt;img src="kucuk-resim.jpg" alt="Açıklama"&gt;
+&lt;/picture&gt;</code>
+            </div>
+            
+            <h3>İlerleme Çubuğu (Progress & Meter)</h3>
+            <div class="code-example">
+<code>&lt;label&gt;İndirme Durumu: &lt;progress value="70" max="100"&gt;%70&lt;/progress&gt;&lt;/label&gt;
+&lt;br&gt;
+&lt;label&gt;Disk Kullanımı: &lt;meter value="0.6" min="0" max="1"&gt;%60&lt;/meter&gt;&lt;/label&gt;</code>
+            </div>
+            <div class="preview-box">
+                <label style="display:block; margin-bottom: 5px; font-weight: 600;">İndirme Durumu:</label>
+                <progress value="70" max="100" style="width: 100%; margin-bottom: 15px;">%70</progress>
+                <label style="display:block; margin-bottom: 5px; font-weight: 600;">Disk Kullanımı:</label>
+                <meter value="0.6" min="0" max="1" style="width: 100%;">%60</meter>
+            </div>
+            
+            <h3>Dialog Etiketi (Açılır Pencere / Popup)</h3>
+            <div class="code-example">
+<code>&lt;dialog open&gt;
+    &lt;p&gt;Bu bir uyarı penceresidir!&lt;/p&gt;
+    &lt;form method="dialog"&gt;
+        &lt;button&gt;Kapat&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/dialog&gt;</code>
+            </div>
+            <div class="preview-box" style="position: relative; padding: 2rem;">
+                <dialog open style="position: static; display: block; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 6px; padding: 1.5rem;">
+                    <p style="margin-top: 0;">Bu bir uyarı penceresidir!</p>
+                    <form method="dialog">
+                        <button type="button" style="padding: 5px 15px; cursor: pointer;">Kapat</button>
+                    </form>
+                </dialog>
+            </div>
+
+            <h3>Ses ve Video (Multimedia)</h3>
+            <div class="code-example">
+<code>&lt;!-- Ses Dosyası --&gt;
+&lt;audio controls&gt;
+    &lt;source src="muzik.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;!-- Video Dosyası --&gt;
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talha'nın Dijital Not Defteri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Arka plan parlamaları -->
+    <div class="glow-circle shape-1"></div>
+    <div class="glow-circle shape-2"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand"><i class="fa-solid fa-code"></i> Talha.dev</div>
+        <div class="nav-links">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="badge">🚀 Öğren. Kodla. Paylaş.</div>
+            <h1 class="main-title">Talha'nın <span>Dijital</span> Not Defteri</h1>
+            <p class="hero-subtitle">Web geliştirme serüvenimde edindiğim bilgileri, öğrendiğim teknolojileri ve
+                yazdığım kodları derlediğim kişisel bilgi bankama hoş geldiniz.</p>
+            <div class="hero-buttons">
+                <a href="#notlar" class="btn btn-primary">Notları Keşfet <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+        </header>
+
+        <main id="notlar" class="main-content">
+            <div class="section-header">
+                <h2>📚 Ders Notları</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="notebook-grid">
+                <!-- HTML5 -->
+                <a href="html5-notes.html" class="notebook-card html-card">
+                    <div class="card-icon"><i class="fab fa-html5"></i></div>
+                    <div class="card-content">
+                        <h2>HTML5 Rehberi</h2>
+                        <p>Temel etiketler, gelişmiş form yapıları, semantik web ve multimedya elemanları.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">#html</span>
+                        <span class="tag">#frontend</span>
+                    </div>
+                </a>
+
+                <!-- CSS3 -->
+                <a href="css3-notes.html" class="notebook-card css-card">
+                    <div class="card-icon"><i class="fab fa-css3-alt"></i></div>
+                    <div class="card-content">
+                        <h2>CSS3 Stilleri</h2>
+                        <p>Seçiciler, Flexbox, Grid düzeni, animasyonlar ve modern web tasarımları.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">#css</span>
+                        <span class="tag">#design</span>
+                    </div>
+                </a>
+
+                <!-- CSS Sözlüğü (Yeni) -->
+                <a href="css-cheatsheet.html" class="notebook-card js-card" style="border-color: var(--accent-3);">
+                    <div class="card-icon"><i class="fa-solid fa-book-open" style="color: var(--accent-3);"></i></div>
+                    <div class="card-content">
+                        <h2>CSS Sözlüğü</h2>
+                        <p>CSS özelliklerinin ne işe yaradığına dair hızlı başvuru rehberi (Cheat Sheet).</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tag">#css</span>
+                        <span class="tag">#sözlük</span>
+                    </div>
+                </a>
+
+                <!-- JavaScript (Kilitli) -->
+                <a href="#" class="notebook-card js-card locked">
+                    <div class="card-icon"><i class="fab fa-js"></i></div>
+                    <div class="card-content">
+                        <h2>JavaScript (Yakında)</h2>
+                        <p>Algoritmalar, DOM manipülasyonu ve modern ES6+ özellikleri hazırlanıyor.</p>
+                    </div>
+                    <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+                </a>
+
+
+                <!-- C# (Kilitli) -->
+                <a href="#" class="notebook-card csharp-card locked">
+                    <div class="card-icon"><i class="fa-solid fa-hashtag"></i></div>
+                    <div class="card-content">
+                        <h2>C# (Yakında)</h2>
+                        <p>.NET framework, LINQ, async programlama ve Unity oyun geliştirme hazırlanıyor.</p>
+                    </div>
+                    <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+                </a>
+
+                <!-- PHP (Kilitli) -->
+                <a href="#" class="notebook-card php-card locked">
+                    <div class="card-icon"><i class="fab fa-php"></i></div>
+                    <div class="card-content">
+                        <h2>PHP (Yakında)</h2>
+                        <p>Laravel, veritabanı işlemleri, RESTful API'ler ve sunucu taraflı geliştirme hazırlanıyor.</p>
+                    </div>
+                    <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Talha'nın Not Defteri. Açık kaynak kodlu ve ❤️ ile yapıldı.</p>
+    </footer>
+</body>
+
+</html>

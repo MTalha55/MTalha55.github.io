@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Ders Notları - Talha'nın Not Defteri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css3-notes.css">
+</head>
+<body>
+    <div class="notes-container">
+        <a href="index.html" class="back-link">&larr; Ana Sayfaya Dön</a>
+        
+        <h1 class="main-title" style="font-size: 2.5rem;">CSS3 Kapsamlı Ders Notları</h1>
+        <p style="text-align: center; color: #94a3b8; margin-bottom: 2rem;">Web sayfalarını şekillendirmek için kullanılan CSS kodları, seçiciler, Flexbox, Grid ve daha fazlası.</p>
+
+        <section class="notes-section">
+            <h2>1. CSS Seçiciler (Selectors) - HTML'i Yakalamak</h2>
+            <p>HTML dersimizde gördüğümüz <code>&lt;div&gt;</code>, <code>class</code> ve <code>id</code> yapılarını hatırlayın. CSS'te bir HTML elemanını renklendirmek veya şekillendirmek için önce onu <strong>seçmemiz</strong> (yakalamamız) gerekir. İşte seçiciler tam olarak bunu yapar.</p>
+            
+            <div class="info-box">
+                <ul>
+                    <li><strong>Etiket Seçici:</strong> HTML etiketinin adını direkt yazarak seçeriz (Örn: <code>p</code>, <code>div</code>). Sayfadaki TÜM o etiketleri etkiler.</li>
+                    <li><strong>Class Seçici (.):</strong> Nokta işareti ile başlar. HTML'de <code>class="kutu"</code> dediğimiz elemanı CSS'te <code>.kutu</code> olarak seçeriz. Aynı stile sahip birden fazla elemanı şekillendirmek için harikadır.</li>
+                    <li><strong>ID Seçici (#):</strong> Diyez (kare) işareti ile başlar. HTML'de <code>id="baslik"</code> dediğimiz elemanı <code>#baslik</code> olarak seçeriz. Sayfada sadece o özel, tek elemanı etkiler.</li>
+                </ul>
+            </div>
+
+            <div class="code-example">
+<code>/* 1. Etiket (Tag) Seçici */
+/* Sayfadaki TÜM <p> ve <div> etiketlerini etkiler */
+div {
+    background-color: darkgray;
+}
+p {
+    color: red;
+}
+
+/* 2. Sınıf (Class) Seçici (.) */
+/* HTML'de class="mavi-metin" olan TÜM elemanları etkiler */
+.mavi-metin {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 3. ID Seçici (#) */
+/* HTML'de sadece id="ana-baslik" olan TEK BİR elemanı etkiler */
+#ana-baslik {
+    font-size: 24px;
+    border-bottom: 2px solid white;
+}
+
+/* 4. Evrensel (Universal) Seçici (*) */
+/* Sayfadaki HER ŞEYİ etkiler */
+* {
+    margin: 0;
+    padding: 0;
+}</code>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>2. Kutu Modeli (Box Model)</h2>
+            <p>Her HTML elemanı bir kutu olarak düşünülür. İçten dışa: İçerik, Padding, Border, Margin.</p>
+            <div class="code-example">
+<code>.kutu {
+    width: 300px;
+    height: 200px;
+    padding: 20px; /* İç boşluk */
+    border: 2px solid black; /* Çerçeve */
+    margin: 15px; /* Dış boşluk */
+    box-sizing: border-box; /* Genişliğe padding ve border'ı dahil et */
+}</code>
+            </div>
+            <div class="preview-box" style="display: flex; justify-content: center;">
+                <div style="width: 300px; height: 150px; padding: 20px; border: 4px solid #333; margin: 15px; background-color: #f1f5f9; box-sizing: border-box; position: relative;">
+                    <div style="background-color: #bae6fd; height: 100%; display: flex; align-items: center; justify-content: center; border: 1px dashed #0284c7; color: #0369a1; font-weight: bold; text-align: center;">
+                        İçerik (Content)<br>Etrafı Padding
+                    </div>
+                    <span style="position: absolute; top: -25px; left: 0; color: #64748b; font-size: 0.8rem;">Dış Boşluk (Margin)</span>
+                    <span style="position: absolute; top: -10px; right: -60px; color: #333; font-size: 0.8rem; font-weight: bold;">Border &rarr;</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>3. Renkler ve Arka Plan (Colors & Backgrounds)</h2>
+            <div class="code-example">
+<code>.arkaplan-ornek {
+    /* Renk Tanımlamaları */
+    color: #ff0000; /* HEX */
+    color: rgb(255, 0, 0); /* RGB */
+    color: rgba(255, 0, 0, 0.5); /* RGBA (Saydamlık) */
+    
+    /* Arka Plan */
+    background-color: #f4f4f4;
+    background-image: url('desen.png');
+    background-size: cover; /* Resmi sığdır */
+    background-position: center; /* Ortala */
+    
+    /* Gradient (Geçişli Renk) */
+    background: linear-gradient(to right, red, blue);
+}</code>
+            </div>
+            <div class="preview-box" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 150px; height: 100px; background-color: #ff0000; color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px;">HEX (#ff0000)</div>
+                <div style="flex: 1; min-width: 150px; height: 100px; background-color: rgba(255, 0, 0, 0.5); color: #333; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #ccc;">RGBA (Saydamlık)</div>
+                <div style="flex: 1; min-width: 150px; height: 100px; background: linear-gradient(to right, red, blue); color: white; display: flex; align-items: center; justify-content: center; border-radius: 8px;">Gradient Geçiş</div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>4. Metin Biçimlendirme (Text Formatting)</h2>
+            <div class="code-example">
+<code>.metin-stili {
+    font-family: 'Inter', sans-serif; /* Yazı Tipi */
+    font-size: 16px; /* Boyut */
+    font-weight: bold; /* Kalınlık (normal, bold, 400, 700 vb.) */
+    text-align: center; /* Hizalama (left, right, center, justify) */
+    text-decoration: none; /* Alt çizgi vb. (underline, line-through) */
+    text-transform: uppercase; /* Hepsini büyük harf yap */
+    line-height: 1.5; /* Satır yüksekliği */
+    letter-spacing: 1px; /* Harf arası boşluk */
+}</code>
+            </div>
+            <div class="preview-box">
+                <p style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: bold; text-align: center; text-transform: uppercase; line-height: 1.5; letter-spacing: 2px; color: #0f172a; margin: 0;">
+                    Bu metin tam olarak yukarıdaki CSS kodları ile biçimlendirilmiştir. Ortalı, kalın, büyük harf ve harf arası boşluklu.
+                </p>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>5. Flexbox (Esnek Kutu Düzeni)</h2>
+            <p>Elemanları tek bir yönde (yatay veya dikey) hizalamak için harika bir düzendir.</p>
+            <div class="code-example">
+<code>.flex-container {
+    display: flex; /* Flexbox'ı aktifleştir */
+    flex-direction: row; /* Yan yana diz (row, column) */
+    justify-content: center; /* Yatayda ortala (flex-start, space-between vb.) */
+    align-items: center; /* Dikeyde ortala */
+    gap: 15px; /* Elemanlar arası boşluk */
+    flex-wrap: wrap; /* Sığmazsa alt satıra geç */
+}
+
+.flex-item {
+    flex: 1; /* Mevcut alanı eşit paylaş */
+}</code>
+            </div>
+            <div class="preview-box">
+                <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 15px; background: #e2e8f0; padding: 15px; border-radius: 8px;">
+                    <div style="flex: 1; background: var(--primary-color); color: white; padding: 20px; text-align: center; border-radius: 4px;">Kutu 1</div>
+                    <div style="flex: 1; background: var(--secondary-color); color: white; padding: 20px; text-align: center; border-radius: 4px;">Kutu 2</div>
+                    <div style="flex: 1; background: var(--primary-color); color: white; padding: 20px; text-align: center; border-radius: 4px;">Kutu 3</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>6. CSS Grid Düzeni</h2>
+            <p>İki boyutlu (satır ve sütunlar) düzenlemeler için kullanılır.</p>
+            <div class="code-example">
+<code>.grid-container {
+    display: grid;
+    /* 3 eşit sütun oluştur */
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 satır oluştur, ilki 100px, ikincisi otomatik */
+    grid-template-rows: 100px auto;
+    gap: 20px; /* Izgara boşluğu */
+}</code>
+            </div>
+            <div class="preview-box">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; background: #e2e8f0; padding: 15px; border-radius: 8px;">
+                    <div style="background: #3b82f6; color: white; padding: 15px; text-align: center; border-radius: 4px;">Hücre 1</div>
+                    <div style="background: #3b82f6; color: white; padding: 15px; text-align: center; border-radius: 4px;">Hücre 2</div>
+                    <div style="background: #3b82f6; color: white; padding: 15px; text-align: center; border-radius: 4px;">Hücre 3</div>
+                    <div style="background: #1d4ed8; color: white; padding: 15px; text-align: center; border-radius: 4px;">Hücre 4</div>
+                    <div style="background: #1d4ed8; color: white; padding: 15px; text-align: center; border-radius: 4px; grid-column: span 2;">Hücre 5 (Genişletilmiş)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>7. Geçişler ve Animasyonlar (Transitions & Animations)</h2>
+            <div class="code-example">
+<code>/* Geçiş (Transition) - Hover olunca yavaşça değişir */
+.buton {
+    background-color: blue;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.buton:hover {
+    background-color: red;
+    transform: scale(1.1); /* %10 büyüt */
+}
+
+/* Animasyon (Keyframes) */
+@keyframes salla {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.animasyonlu-kutu {
+    animation: salla 1s infinite;
+}</code>
+            </div>
+            <div class="preview-box" style="display: flex; gap: 2rem; justify-content: center; align-items: center; padding: 3rem;">
+                <button style="background-color: blue; color: white; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background-color 0.3s ease, transform 0.2s;" onmouseover="this.style.backgroundColor='red'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='blue'; this.style.transform='scale(1)';">
+                    Üzerime Gel (Hover)
+                </button>
+                
+                <div style="background-color: #f59e0b; color: white; font-weight: bold; padding: 15px 30px; border-radius: 8px; animation: previewSalla 1s infinite;">
+                    Sürekli Sallanan Kutu
+                </div>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <h2>8. Medya Sorguları (Responsive Design)</h2>
+            <p>Ekran boyutlarına göre farklı stiller uygulamak için kullanılır.</p>
+            <div class="code-example">
+<code>/* Varsayılan stil (Mobil öncelikli - örneğin) */
+.konteyner {
+    width: 100%;
+}
+
+/* Ekran genişliği 768px veya daha büyükse bu kodlar çalışır (Tablet/Masaüstü) */
+@media (min-width: 768px) {
+    .konteyner {
+        width: 50%;
+    }
+}</code>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

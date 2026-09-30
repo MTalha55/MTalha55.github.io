@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sözlüğü - Talha'nın Not Defteri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/css-cheatsheet.css">
+</head>
+<body>
+    <div class="notes-container">
+        <a href="index.html" class="back-link">&larr; Ana Sayfaya Dön</a>
+        
+        <h1 class="main-title" style="font-size: 2.5rem;">CSS Sözlüğü & Cheat Sheet</h1>
+        <p style="text-align: center; color: #94a3b8; margin-bottom: 2rem;">En çok kullanılan CSS kodlarının ne işe yaradığına dair hızlı başvuru rehberi.</p>
+
+        <!-- 1. Metin ve Yazı Tipi -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-font"></i> 1. Metin ve Yazı Tipi (Typography)</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>color</code><p>Metnin rengini belirler <em>(Örn: color: red;)</em>.</p></div>
+                <div class="prop-item"><code>font-size</code><p>Yazı boyutunu ayarlar <em>(Örn: font-size: 16px;)</em>.</p></div>
+                <div class="prop-item"><code>font-family</code><p>Yazı tipini (ailesini) belirler <em>(Örn: font-family: Arial, sans-serif;)</em>.</p></div>
+                <div class="prop-item"><code>font-weight</code><p>Yazının kalınlığını ayarlar <em>(Örn: font-weight: bold; veya 700)</em>.</p></div>
+                <div class="prop-item"><code>font-style</code><p>Yazıyı italik yapmak için kullanılır <em>(Örn: font-style: italic;)</em>.</p></div>
+                <div class="prop-item"><code>text-align</code><p>Metnin hizasını belirler <em>(left, right, center, justify)</em>.</p></div>
+                <div class="prop-item"><code>text-decoration</code><p>Metnin altını çizmek, üstünü çizmek veya çizgiyi kaldırmak için kullanılır <em>(Örn: text-decoration: none;)</em>.</p></div>
+                <div class="prop-item"><code>line-height</code><p>Satırlar arasındaki boşluğu (yüksekliği) ayarlar.</p></div>
+                <div class="prop-item"><code>text-transform</code><p>Metni büyük/küçük harfe dönüştürür <em>(uppercase, lowercase, capitalize)</em>.</p></div>
+            </div>
+        </section>
+
+        <!-- 2. Kutu Modeli -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-box"></i> 2. Kutu Modeli (Box Model) ve Boyutlandırma</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>width</code><p>Bir elementin genişliğini belirler.</p></div>
+                <div class="prop-item"><code>height</code><p>Bir elementin yüksekliğini belirler.</p></div>
+                <div class="prop-item"><code>padding</code><p>Elementin içeriği ile kenarlığı (border) arasındaki iç boşluğu ayarlar.</p></div>
+                <div class="prop-item"><code>margin</code><p>Elementin dışındaki diğer elementlerle olan dış boşluğunu ayarlar.</p></div>
+                <div class="prop-item"><code>border</code><p>Elementin kenarlığının kalınlığını, stilini ve rengini belirler <em>(Örn: border: 1px solid black;)</em>.</p></div>
+                <div class="prop-item"><code>border-radius</code><p>Elementin köşelerini yuvarlatır.</p></div>
+                <div class="prop-item"><code>box-sizing</code><p>Genişlik ve yükseklik hesaplamalarına padding ve border'ın dahil olup olmayacağını belirler <em>(border-box sıkça kullanılır)</em>.</p></div>
+            </div>
+        </section>
+
+        <!-- 3. Arka Plan -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-image"></i> 3. Arka Plan ve Görsel (Background)</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>background-color</code><p>Arka plan rengini belirler.</p></div>
+                <div class="prop-item"><code>background-image</code><p>Arka plana görsel ekler.</p></div>
+                <div class="prop-item"><code>background-size</code><p>Arka plan görselinin boyutunu ayarlar <em>(cover, contain)</em>.</p></div>
+                <div class="prop-item"><code>background-repeat</code><p>Görselin tekrarlanıp tekrarlanmayacağını belirler <em>(no-repeat, repeat-x)</em>.</p></div>
+                <div class="prop-item"><code>opacity</code><p>Elementin saydamlığını (şeffaflığını) ayarlar <em>(0 ile 1 arasında değer alır)</em>.</p></div>
+            </div>
+        </section>
+
+        <!-- 4. Yerleşim -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-layer-group"></i> 4. Yerleşim ve Düzen (Layout & Display)</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>display</code><p>Elementin tarayıcıda nasıl görüntüleneceğini belirler <em>(block, inline, flex, grid, none)</em>.</p></div>
+                <div class="prop-item"><code>position</code><p>Elementin konumlandırma türünü belirler <em>(static, relative, absolute, fixed, sticky)</em>.</p></div>
+                <div class="prop-item"><code>top, bottom, left, right</code><p>Konumlandırılmış (position alan) elementlerin yerini koordinat vererek ayarlar.</p></div>
+                <div class="prop-item"><code>z-index</code><p>Üst üste binen elementlerin hangi sırada (önde veya arkada) görüneceğini belirler <em>(sayısal değer alır)</em>.</p></div>
+                <div class="prop-item"><code>overflow</code><p>İçerik elementin dışına taştığında ne olacağını belirler <em>(hidden, scroll, auto)</em>.</p></div>
+            </div>
+        </section>
+
+        <!-- 5. Flexbox -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-table-cells-large"></i> 5. Flexbox ve Grid (Modern Yerleşim)</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>flex-direction</code><p>Flex elemanlarının dizilim yönünü belirler <em>(row, column)</em>.</p></div>
+                <div class="prop-item"><code>justify-content</code><p>Flex/Grid elemanlarını yatay eksende hizalar <em>(center, space-between, vb.)</em>.</p></div>
+                <div class="prop-item"><code>align-items</code><p>Elemanları dikey eksende hizalar.</p></div>
+                <div class="prop-item"><code>gap</code><p>Elemanlar arasındaki boşluğu ayarlar.</p></div>
+                <div class="prop-item"><code>grid-template-columns</code><p>Grid (ızgara) yapısında sütunların boyutlarını ve sayısını belirler.</p></div>
+            </div>
+        </section>
+
+        <!-- 6. Animasyon -->
+        <section class="notes-section">
+            <h2><i class="fa-solid fa-wand-magic-sparkles"></i> 6. Geçiş ve Animasyon (Transitions & Animations)</h2>
+            <div class="property-list">
+                <div class="prop-item"><code>transition</code><p>Bir özellikteki değişimin ne kadar sürede gerçekleşeceğini belirler (Yumuşak geçiş sağlar).</p></div>
+                <div class="prop-item"><code>animation</code><p>@keyframes ile oluşturulan gelişmiş animasyonları elemente bağlar.</p></div>
+                <div class="prop-item"><code>cursor</code><p>Mouse imlecinin element üzerindeyken alacağı şekli belirler <em>(Örn: pointer el işareti yapar)</em>.</p></div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
