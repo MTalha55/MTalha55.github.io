@@ -138,3 +138,80 @@ h1.main-title {
     margin-top: 0;
     font-weight: normal;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .notes-container {
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    h1.main-title {
+        font-size: 1.8rem !important;
+    }
+
+    .notes-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .notes-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .code-example {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .code-example code {
+        font-size: 0.8rem;
+    }
+
+    .preview-box {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-box {
+        padding: 1rem;
+    }
+
+    .info-box ul {
+        margin-left: 1rem;
+    }
+
+    .form-preview {
+        padding: 1rem;
+    }
+
+    .form-preview fieldset {
+        padding: 0.75rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-container {
+        padding: 1rem;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+
+    h1.main-title {
+        font-size: 1.5rem !important;
+    }
+
+    .notes-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .code-example code {
+        font-size: 0.75rem;
+    }
+}
