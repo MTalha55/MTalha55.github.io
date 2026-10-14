@@ -52,3 +52,10 @@ function initScrollReveal() {
 
   reveals.forEach(el => observer.observe(el));
 }
+
+// Toggle project description expand/collapse
+function toggleDesc(btn) {
+  const wrapper = btn.closest('.project-desc-wrapper');
+  const isExpanded = wrapper.classList.toggle('expanded');
+  btn.childNodes[0].textContent = isExpanded ? 'Daha Az ' : 'Daha Fazla ';
+}
