@@ -33,6 +33,20 @@
         <a href="talha_notebook/index.html" class="nav-link " target="_blank">Not Defterim</a>
       </div>
       <a href="mailto:xenonstate.offical@gmail.com" class="nav-cta" id="nav-cta-btn">Bana Ulaşın</a>
+      <!-- Hamburger Menu (Mobile) -->
+      <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+      <label for="hamburger-toggle" class="hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="mobile-menu-overlay">
+        <a href="index.html" class="mobile-nav-link">Ana Sayfa</a>
+        <a href="about.html" class="mobile-nav-link">Hakkımda</a>
+        <a href="projects.html" class="mobile-nav-link active">Projeler</a>
+        <a href="talha_notebook/index.html" class="mobile-nav-link" target="_blank">Not Defterim</a>
+        <a href="mailto:xenonstate.offical@gmail.com" class="mobile-nav-cta">Bana Ulaşın</a>
+      </div>
     </div>
   </nav>
 
@@ -53,14 +67,19 @@
           <div class="project-content">
             <div class="project-category">Mobil / Web Uygulama</div>
             <h3 class="project-title">WATCHVAULT</h3>
-            <p class="project-desc">
-              <strong>Kişisel Arşiv ve Takip:</strong> Film ve dizilerini kolayca listele, izleme durumlarını yönet ve
-              kendi dijital kütüphaneni oluştur.<br><br>
-              <strong>Admin ile İletişim:</strong> Kullanıcıların sistem üzerinden doğrudan admin ile bağlantı
-              kurabildiği, öneri ve geri bildirimlerini iletebildiği etkileşimli yapı.<br><br>
-              <strong>Modern Arayüz:</strong> Sade, şık ve kullanıcı deneyimini ön planda tutan tasarımıyla akıcı bir
-              kullanım deneyimi sunar.
-            </p>
+            <div class="project-desc-wrapper">
+              <p class="project-desc">
+                <strong>Kişisel Arşiv ve Takip:</strong> Film ve dizilerini kolayca listele, izleme durumlarını yönet ve
+                kendi dijital kütüphaneni oluştur.<br><br>
+                <strong>Admin ile İletişim:</strong> Kullanıcıların sistem üzerinden doğrudan admin ile bağlantı
+                kurabildiği, öneri ve geri bildirimlerini iletebildiği etkileşimli yapı.<br><br>
+                <strong>Modern Arayüz:</strong> Sade, şık ve kullanıcı deneyimini ön planda tutan tasarımıyla akıcı bir
+                kullanım deneyimi sunar.
+              </p>
+              <button class="btn-read-more" onclick="toggleDesc(this)">
+                Daha Fazla <span class="arrow-icon">▼</span>
+              </button>
+            </div>
             <div class="project-tech" style="margin-bottom: 24px;">
               <span class="tech-tag">React Native</span>
               <span class="tech-tag">JavaScript</span>
