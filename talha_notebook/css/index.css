@@ -301,3 +301,169 @@ footer {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .notebook-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 1rem 4%;
+    }
+
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 4rem 0 3rem 0;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Section Header */
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Notebook Grid - 2 per row on mobile */
+    .notebook-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .notebook-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-content h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .card-footer {
+        gap: 0.3rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .lock-icon {
+        top: 1.2rem;
+        right: 1.2rem;
+        font-size: 1rem;
+    }
+
+    /* Page wrapper */
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    /* Glow effects - reduce on mobile */
+    .glow-circle {
+        width: 300px;
+        height: 300px;
+        filter: blur(80px);
+        opacity: 0.3;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        padding: 3rem 0 2rem 0;
+    }
+
+    .notebook-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .notebook-card {
+        padding: 1.2rem;
+        border-radius: 14px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-content h2 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .card-content p {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .tag {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+
+    .navbar {
+        padding: 0.8rem 4%;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
