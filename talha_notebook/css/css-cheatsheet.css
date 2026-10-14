@@ -107,3 +107,70 @@ h1.main-title {
     color: #94a3b8;
     font-size: 0.9rem;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .notes-container {
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    h1.main-title {
+        font-size: 1.8rem !important;
+    }
+
+    .notes-section h2 {
+        font-size: 1.3rem;
+        gap: 6px;
+    }
+
+    .prop-item {
+        padding: 1rem;
+    }
+
+    .prop-item code {
+        font-size: 0.95rem;
+    }
+
+    .prop-item p {
+        font-size: 0.9rem;
+    }
+
+    .prop-item em {
+        font-size: 0.8rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-container {
+        padding: 1rem;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+
+    h1.main-title {
+        font-size: 1.5rem !important;
+    }
+
+    .notes-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .prop-item {
+        padding: 0.8rem;
+    }
+
+    .prop-item code {
+        font-size: 0.85rem;
+    }
+
+    .prop-item p {
+        font-size: 0.85rem;
+    }
+}
